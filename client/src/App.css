@@ -19,3 +19,21 @@ input{
   border-bottom: 1px solid #2c3e50;
   padding:5px;
 }
+.list{
+  background-color:#874c9e;
+  padding: 15px;
+  margin: 5px;
+  overflow-x: hidden;
+  border-radius: 5px;
+  cursor:pointer;
+}
+.list span{
+  color: #fff;
+}
+.icon{
+  float:right;
+  margin-right: 20px; 
+}
+.article{
+  display: grid;
+}

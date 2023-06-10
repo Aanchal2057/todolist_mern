@@ -4,8 +4,8 @@ dotenv.config();
 const USERNAME = process.env.DB_USERNAME;
 const PASSWORD = process.env.DB_PASSWORD;
  const Connection = () =>{
-    const MONGODB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todolist.xfbbgg7.mongodb.net/`
-   
+    // const MONGODB_URI = `mongodb+srv://${USERNAME}:${PASSWORD}@mern-todolist.xfbbgg7.mongodb.net/`
+    const MONGODB_URI = `mongodb+srv://aanchal123:aanchal123@mern-todolist.xfbbgg7.mongodb.net/`
     mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
     mongoose.connection.on('connected',()=>{
         console.log('Database connected successfully');
@@ -13,7 +13,7 @@ const PASSWORD = process.env.DB_PASSWORD;
     mongoose.connection.on('disconnected',()=>{
       console.log('Database disconnected');
     })
-    mongoose.connection.on('error',()=>{
+    mongoose.connection.on('error',(error)=>{
         console.log('Error while connecting with the database',error.mess);
       })
 }
